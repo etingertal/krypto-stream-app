@@ -90,7 +90,6 @@ jobs:
 
       - name: NPM Audit 
         run: |
-          npm config set loglevel verbose
           npm cache clean --force
           rm -rf package-lock.json
           jf npmc --repo-resolve ${{ github.event.inputs.rt_npm_remote_repo_id }}
