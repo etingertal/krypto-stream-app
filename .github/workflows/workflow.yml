@@ -127,7 +127,7 @@ jobs:
           if [ ${{ github.event.inputs.xr_enable_scan }} == 'true' ]; then
             echo "digest=$(docker images --no-trunc --quiet ${{ vars.JF_URL }}/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }})" >> $GITHUB_OUTPUT
             jf docker pull ${{ vars.JF_URL }}/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}:${{ github.run_number }}
-            jf docker scan ${{ vars.JF_URL }}/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}:${{ github.run_number }} --watches=talet-fail-build-watch
+            jf docker scan ${{ vars.JF_URL }}/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}:${{ github.run_number }}
           else
             echo "Skip Xray scanning!!!"
           fi
