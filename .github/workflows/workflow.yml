@@ -140,4 +140,5 @@ jobs:
       
       - name: Build Scan
         run: |            
+          sleep 60
           jf build-scan --fail=${{ github.event.inputs.xr_override_fail_build }} --vuln
