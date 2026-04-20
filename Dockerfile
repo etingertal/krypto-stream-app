@@ -1,4 +1,5 @@
-FROM node:latest
+#FROM node:latest
+FROM solenglatest.jfrog.io/dsod24-docker-remote/node:latest
 #ARG JF_TOKEN
 
 # Create app directory
